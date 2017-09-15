@@ -1,0 +1,21 @@
+{
+  "development": {
+    "title": "내 안에 작은 마켓: Small",
+    "port": 3000,
+    "db": {
+      "host": "eunchan.cpkr1tbnybpi.us-east-2.rds.amazonaws.com",
+      "user": "eunchan",
+      "username": "eunchan",
+      "password": "Hacker1!",
+      "database": "Small",
+      "charset": "utf8",
+      "dialect": "mysql",
+      "logging": true,
+      "multipleStatements": true,
+      "timezone": "+09:00"
+    }
+  },
+  "production": {
+  
+  }
+}
