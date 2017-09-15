@@ -13,9 +13,8 @@ module.exports = function(sequelize, DataTypes) {
   });
   
  store.associate = function(models){
-      store.belongsTo(models.material, { foreignKey: {name: 'professor_uid', allowNull: false}, onDelete: 'CASCADE', onUpdate: 'CASCADE'});
-      board_post.belongsTo(models.board, { foreignKey: {name: 'board_id', allowNull: false}, onDelete: 'CASCADE', onUpdate: 'CASCADE'});
+      store.belongsTo(models.user, { foreignKey: {name: 'user_id', allowNull: false}, onDelete: 'CASCADE', onUpdate: 'CASCADE'});
   }
 
-  return user;
+  return store;
 };

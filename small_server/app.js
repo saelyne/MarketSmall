@@ -14,7 +14,6 @@ var viewPath = config.path;
 var session = require('express-session');
 var sequelize = require('sequelize');
 
-console.log(process.env.NODE_ENV);
 
 var app = express();
 
@@ -38,13 +37,12 @@ app.use(function(err, req, res, next) {
 
 
 var routes = require('./routes/index');
-//var classes = require('./routes/classes');
 
 
 
 app.use('/', routes);
+
 /*
-app.use('/profsystem/board/', board);
 app.use('/profsystem/classes/', classes);
 app.use('/profsystem/dept/', dept);
 app.use('/profsystem/prof/', prof);
@@ -79,11 +77,11 @@ app.use(function(err, req, res, next) {
 app.set('port', config.port);
 var server = http.createServer(app);
 
+/*
 models.sequelize.sync(function(){
     force: true
 });
-
-
+*/
 
 /**
  * Listen on provided port, on all network interfaces.

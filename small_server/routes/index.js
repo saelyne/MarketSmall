@@ -9,7 +9,13 @@ var mkdirp = require('mkdirp');
 var multer = require('multer');
 var config = require('../config/config.json')[process.env.NODE_ENV || "development"];
 
+var store = require('../routes/store');
+var user = require('../routes/user');
+var order = require('../routes/order');
 
+router.use('/store/', store);
+router.use('/user/', user);
+router.use('/order/',order);
 
 router.get('/', function(req, res, next){
     res.sendFile(path.join(__dirname, viewPath.index, 'index.html'));

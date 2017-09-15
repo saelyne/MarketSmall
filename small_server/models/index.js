@@ -18,7 +18,7 @@ fs.readdirSync(__dirname)
         db[model.name] = model;
     });
 
-var modelProto = ['user.js'];
+var modelProto = ['user.js','items.js','order_line_item.js','sales_order.js','store.js'];
 modelProto.forEach(function(file) {
     var model = sequelize.import(path.join(__dirname, file));
     db[model.name] = model;

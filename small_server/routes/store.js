@@ -11,7 +11,15 @@ var config = require('../config/config.json')[process.env.NODE_ENV || "developme
 
 
 
-
+router.get('/:id', function(req, res, next){
+	models.items.findAll({
+		where:{store_id: req.params.id}
+	}).then((data)=>{
+		res.send(data);
+	}).catch(()=>{
+		res.send({result:false});
+	});
+});
 
 
 

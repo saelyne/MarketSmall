@@ -23,6 +23,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER(6),
       allowNull: false,
       defaultValue: '0'
+    },
+    store_id: {
+      type: DataTypes.INTEGER(10),
+      allowNull: true
     }
   }, {
     tableName: 'user',
