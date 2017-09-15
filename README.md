@@ -1,6 +1,6 @@
 # MarketSmall
 
 How to Run Server:
-		npm install && start node.js
+		npm install && node app.js
 
 add some text
