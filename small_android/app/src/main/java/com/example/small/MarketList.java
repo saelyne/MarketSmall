@@ -41,7 +41,7 @@ import static android.R.id.list;
 
 public class MarketList extends AppCompatActivity {
 
-    private Button setLocationBtn;
+    private Button Btn;
     private ListView data;
     private ArrayList<HashMap<String, String>> list;
 
@@ -53,21 +53,19 @@ public class MarketList extends AppCompatActivity {
         data = (ListView) findViewById(R.id.data);
 
 
-
         sendRequest();
         ActivityCompat.requestPermissions(this, new String[]{
                 android.Manifest.permission.ACCESS_FINE_LOCATION,
                 android.Manifest.permission.ACCESS_COARSE_LOCATION}, 0);
 
-//        setLocationBtn= (Button) findViewById(R.id.Setlocationbutton);
-//
-//        setLocationBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(CustomerMain.this, SetLocation.class);
-//                startActivity(intent);
-//            }
-//        });
+        Btn= (Button) findViewById(R.id.Checkbutton);
+        Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MarketList.this, ItemList.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
