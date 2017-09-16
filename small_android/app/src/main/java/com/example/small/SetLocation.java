@@ -52,7 +52,6 @@ public class  SetLocation extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
-
     }
 
 

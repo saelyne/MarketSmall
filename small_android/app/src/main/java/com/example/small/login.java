@@ -13,6 +13,7 @@ import android.widget.Button;
 public class login extends AppCompatActivity {
 
     private Button customerBtn;
+    private Button sellerBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +21,20 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         customerBtn = (Button) findViewById(R.id.Customerbutton);
+        sellerBtn = (Button) findViewById(R.id.Sellerbutton);
 
         customerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(login.this, SetLocation.class);
+                startActivity(intent);
+            }
+        });
+
+        sellerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(login.this, SellerMain.class);
                 startActivity(intent);
             }
         });
