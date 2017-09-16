@@ -34,7 +34,7 @@ public class login extends AppCompatActivity {
         sellerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(login.this, SellerMain.class);
+                Intent intent = new Intent(login.this, TypeSeller.class);
                 startActivity(intent);
             }
         });
