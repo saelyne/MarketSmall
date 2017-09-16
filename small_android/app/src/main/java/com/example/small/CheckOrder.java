@@ -24,7 +24,7 @@ public class CheckOrder extends AppCompatActivity {
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CheckOrder.this, BuyerMain.class);
+                Intent intent = new Intent(CheckOrder.this, login.class);
                 startActivity(intent);
             }
         });
