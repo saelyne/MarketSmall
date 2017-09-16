@@ -4,8 +4,8 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.example.hongyejin.small"
-        minSdkVersion 24
+        applicationId "com.example.small"
+        minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -28,4 +28,6 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:recyclerview-v7:25.3.1'
+
+    compile 'com.google.android.gms:play-services-maps:11.0.4'
 }
