@@ -65,7 +65,8 @@ public class ItemList extends AppCompatActivity {
                     ArrayList<String> names = new ArrayList<String>();
                     for(Orders a : list){
                         String b = a.name;
-                        names.add(b);
+                        int p = (a.price).intValue();
+                        names.add(""+b+" ("+p+"원)");
                     }
 
                     ArrayAdapter<String> aList = new ArrayAdapter<String>(ItemList.this,android.R.layout.simple_list_item_1,names);

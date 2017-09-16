@@ -50,7 +50,7 @@ public class ConfirmOrder extends AppCompatActivity {
         sum=0;
         for(int i=0; i<positions.size();i++){
             finalOrder.add(orders.get(positions.get(i)));
-            cart.add(orders.get(positions.get(i)).name);
+            cart.add(orders.get(positions.get(i)).name+" ("+orders.get(positions.get(i)).price+"원)");
             sum+=orders.get(positions.get(i)).price;
         }
         total.setText("총 금액: "+ sum+" 원 ");
