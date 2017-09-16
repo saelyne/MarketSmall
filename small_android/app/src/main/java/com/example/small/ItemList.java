@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -73,6 +74,7 @@ public class ItemList extends AppCompatActivity {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                             positions.add((int)id);
+                            Toast.makeText(ItemList.this, orders.get(position).getName()+"이/가 추가되었습니다", Toast.LENGTH_SHORT).show();
                         }
                     });
 
