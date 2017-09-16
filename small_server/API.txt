@@ -16,7 +16,8 @@ POST /order/addItem/				O				parameters: quantity, unitprice, sales_order_id, it
 
 Store:
 
-GET  	/store/:id					O				Get list of materials of the store with :id
+GET  	/store/getStore/:id			O				Get list of materials of the store with :id
+GET     /store/getStore             O               Get all the store list 
 POST 	/store/addStore				O               parameters: name, user_id
 POST 	/store/addItem				O 				parameters: name, price, store_id
 DELETE	/store/deleteItem/:id       O               delete item with id (pk)
