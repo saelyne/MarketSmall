@@ -1,85 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="@color/theme">
 
     <Button
         android:id="@+id/deliver"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="0dp"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="43dp"
-        android:background="@drawable/deliver"
-        android:textColor="@color/white" />
+        android:background="@drawable/deliver2"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="180dp"
-        android:text="deliver"
+        android:layout_marginTop="225dp"
+        android:text="배달확인"
         android:textSize="18sp"
-        android:textColor="@color/theme"
+        android:textColor="@color/white"
 
         />
+
 
     <Button
         android:id="@+id/add"
-        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/deliver"
+        android:layout_marginTop="170dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="43dp"
-        android:background="@drawable/add"
+        android:background="@drawable/add2"
         android:textColor="@color/white" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="330dp"
-        android:text="add"
+        android:layout_marginTop="390dp"
+        android:text="물품추가"
         android:textSize="18sp"
-        android:textColor="@color/theme"
-
+        android:textColor="@color/white"
         />
+
+
 
     <Button
         android:id="@+id/delete"
-        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/add"
+        android:layout_marginTop="340dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="43dp"
-        android:background="@drawable/delete"
+        android:background="@drawable/delete2"
+
         android:textColor="@color/white" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="490dp"
-        android:text="deliver"
+        android:layout_marginTop="565dp"
+        android:text="물품삭제"
         android:textSize="18sp"
-        android:textColor="@color/theme"
+        android:textColor="@color/white"
 
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/delete"
-        android:paddingTop="80dp"
-        android:text="Small"
-        android:textStyle="bold"
-        android:textSize="23sp"
-        android:textColor="@color/theme"
-
-        />
 
 </RelativeLayout>
