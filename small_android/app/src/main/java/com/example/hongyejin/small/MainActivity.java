@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        String url = "http://       .cafe24.com/LoadPat        ";
+        String url = "http://localhost:3000/";
 
         // AsyncTask를 통해 HttpURLConnection 수행.
         NetworkTask networkTask = new NetworkTask(url, null);
