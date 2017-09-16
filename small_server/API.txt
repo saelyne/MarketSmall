@@ -1,18 +1,19 @@
 REST API
 
-			 					Done?			Description
+			 						Done?			Description
 User:
 
-POST /user/register             X
-POST /user/login 				X
+POST /user/register             	X
+POST /user/login 					X
 
 Order:
-GET  /order/:order_number		O  				Get order information with order number
-POST /order/selectStore/		O				parameters: order_number, store_id, user_id, add row to order table with parameters
-POST /order/addItem/			O				parameters: quantity, unitprice, sales_order_id
+GET  /order/:order_number			O  				Get order information with order number
+POST /order/selectStore/			O				parameters: order_number, store_id, user_id, add row to order table with parameters
+POST /order/addItem/				O				parameters: quantity, unitprice, sales_order_id
 
 
 Store:
 
-GET /store/:id					O				Get list of materials of the store with :id
-POST /store/addItem				O 				parameters: name, price, store_id
+GET  	/store/:id					O				Get list of materials of the store with :id
+POST 	/store/addItem				O 				parameters: name, price, store_id
+DELETE	/store/deleteItem/:id       O               delete item with id (pk)

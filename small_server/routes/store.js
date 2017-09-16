@@ -21,7 +21,7 @@ router.get('/:id', function(req, res, next){
 	});
 });
 
-router.post('/addItem',function(req,resnext){
+router.post('/addItem',function(req,res,next){
 	models.items.create({
 		name: req.body.name,
 		price: req.body.price,
@@ -32,5 +32,15 @@ router.post('/addItem',function(req,resnext){
 		res.send({result:false});
 	})
 });
+
+router.delete('/deleteItem/:id',function(req,res){
+	models.items.destroy({
+		where: {id: req.params.id}
+	}).then(()=>{
+		res.send({result:true});
+	}).catch(()=>{
+		res.send({result: false});
+	})
+})
 
 module.exports = router;
