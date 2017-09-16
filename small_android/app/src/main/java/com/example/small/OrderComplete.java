@@ -25,7 +25,8 @@ import retrofit2.Response;
 
 import static com.example.small.ItemList.orders;
 import static com.example.small.ItemList.positions;
-import static com.example.small.MarketList.store_id;
+import static com.example.small.StoreAdapter.store_id;
+import static com.example.small.StoreAdapter.user_id;
 
 /**
  * Created by Saelyne on 2017. 9. 16..
@@ -65,7 +66,7 @@ public class OrderComplete extends AppCompatActivity {
                 address= editaddress.getText().toString();
                 phone = editphone.getText().toString();
                 Intent intent2 = getIntent();
-                ItemData itemdata= new ItemData(phone,(long)a,address,name,store_id,(long)1111);
+                ItemData itemdata= new ItemData(phone,(long)a,address,name,store_id,Long.parseLong(user_id));
                 sendRequest(itemdata);
                 sendReq(orders,positions);
 

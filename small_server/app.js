@@ -75,8 +75,8 @@ var server = http.createServer(app);
 models.sequelize.sync(function(){
     force: true
 });
-*/
 
+/*
 /**
  * Listen on provided port, on all network interfaces.
  */

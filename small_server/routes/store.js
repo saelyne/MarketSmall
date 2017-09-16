@@ -21,6 +21,32 @@ router.get('/getStoreItem/:id', function(req, res, next){
 	});
 });
 
+router.get('/getMyStore/:uid',function(req,res,next){
+	models.store.findAll({
+		where:{
+			user_id: req.params.uid
+		},
+		attributes: ['id']
+	}).then((data)=>{
+
+		for(var a in data){
+      data[a]=data[a].id;
+     }
+		models.items.findAll({
+			where: 
+			{
+				id: {$notIn:data}
+			},
+			include: [models.store]
+		}).then((result)=>{
+			res.send(result);
+		}).catch(()=>{
+			res.send({result: false});
+		})
+		
+	})
+});
+
 router.get('/getStore',function(req,res,next){
 	models.store.findAll({
 		attributes: ['id','name','latitude','longitude','user_id']
@@ -66,7 +92,7 @@ router.post('/deleteItem/:id',function(req,res,next){
 
 router.get('/getOrder/:store_id',function(req,res,next){
 	models.sales_order.findAll({
-		where:{ store_id: req.params.store_id}
+		where:{ user_id: req.params.store_id}
 	}).then((data)=>{
 		res.send(data);
 	}).catch(()=>{

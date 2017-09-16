@@ -22,6 +22,8 @@ import static android.R.attr.id;
 public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.ViewHolder> {
     private List<StoreData> storeList;
     private Context context;
+    public static long store_id;
+    public static String user_id;
 
 
 
@@ -58,7 +60,9 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.ViewHolder> 
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context,ItemList.class);
-                intent.putExtra("ids",""+(storeData.getId()+1));
+                intent.putExtra("ids",""+(storeData.getId()));
+                store_id = storeData.getId();
+                user_id = storeData.getUser_id();
                 context.startActivity(intent);
             }
         });

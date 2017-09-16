@@ -52,6 +52,7 @@ public class MarketList extends AppCompatActivity {
     //private ListView data;
     RecyclerView storeView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
