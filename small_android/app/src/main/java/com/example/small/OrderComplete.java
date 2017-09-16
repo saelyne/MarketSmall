@@ -60,6 +60,7 @@ public class OrderComplete extends AppCompatActivity {
                 ItemData itemdata= new ItemData(phone,(long)a,address,name,(long)3,(long)1);
                 sendRequest(itemdata);
                 Intent intent = new Intent(OrderComplete.this, FinalComplete.class);
+                intent.putExtra("total",a);
                 startActivity(intent);
             }
         });
