@@ -28,7 +28,7 @@ public class SellerMain extends AppCompatActivity {
         deliverBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SellerMain.this, SetLocation.class);
+                Intent intent = new Intent(SellerMain.this, DeliverList.class);
                 startActivity(intent);
             }
         });
@@ -36,7 +36,7 @@ public class SellerMain extends AppCompatActivity {
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SellerMain.this, SetLocation.class);
+                Intent intent = new Intent(SellerMain.this, ItemAdd.class);
                 startActivity(intent);
             }
         });
@@ -44,7 +44,7 @@ public class SellerMain extends AppCompatActivity {
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SellerMain.this, SetLocation.class);
+                Intent intent = new Intent(SellerMain.this, ItemDelete.class);
                 startActivity(intent);
             }
         });

@@ -35,7 +35,7 @@ public class BuyerMain extends AppCompatActivity {
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BuyerMain.this, CheckOrder.class);
+                Intent intent = new Intent(BuyerMain.this, TypeBuyer.class);
                 startActivity(intent);
             }
         });
