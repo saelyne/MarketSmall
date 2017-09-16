@@ -52,7 +52,7 @@ router.post('/addItem',function(req,res,next){
 	})
 });
 
-router.post('/deleteItem/:id',function(req,res){
+router.post('/deleteItem/:id',function(req,res,next){
 	models.items.destroy({
 		where: {id: req.params.id}
 	}).then(()=>{
@@ -60,9 +60,9 @@ router.post('/deleteItem/:id',function(req,res){
 	}).catch(()=>{
 		res.send({result: false});
 	})
-})l
+});
 
-router.get('/getOrder/:store_id'){
+router.get('/getOrder/:store_id',function(req,res,next){
 	models.sales_order.findAll({
 		where:{ store_id: req.params.store_id}
 	}).then((data)=>{
@@ -70,6 +70,6 @@ router.get('/getOrder/:store_id'){
 	}).catch(()=>{
 		res.send({result:false});
 	})
-}
+});
 
 module.exports = router;
