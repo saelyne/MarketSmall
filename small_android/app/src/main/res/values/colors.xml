@@ -25,4 +25,5 @@
     <color name="translucent">#22a1a1a1</color>
     <color name="button">#66ffffff</color>
     <color name="reg_hint">#0a6b77</color>
+    <color name="theme">#62BD52</color>
 </resources>
