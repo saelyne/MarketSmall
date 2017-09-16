@@ -8,6 +8,8 @@ POST /user/login 					X
 
 Order:
 GET  /order/:order_number			O  				Get order information with order number
+GET  /order/setTotal/:order_number  O  				Set the total cost of order
+
 POST /order/selectStore/			O				parameters: order_number, store_id, user_id, add row to order table with parameters
 POST /order/addItem/				O				parameters: quantity, unitprice, sales_order_id
 

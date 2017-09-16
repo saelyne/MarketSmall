@@ -5,6 +5,7 @@ var session = require('express-session');
 var models = require('../models');
 var fs = require('fs');
 var path = require('path');
+var async = require('async');
 var mkdirp = require('mkdirp');
 var multer = require('multer');
 var config = require('../config/config.json')[process.env.NODE_ENV || "development"];
@@ -45,6 +46,26 @@ router.post('/addItem', function(req,res,next){
     res.send({result:true})
   }).catch(()=>{
     res.send({result:false})
+  });
+});
+
+router.get('/setTotal/:order_number',function(req,res,next){
+  models.order_line_item.findAll({
+    where:{sales_order_id: req.params.order_number}
+  }).then((result)=>{
+
+    var sum=0;
+    for(var a in result){
+      sum+=result[a].ExtendedPrice
+    }
+
+    models.sales_order.update({total: sum},{
+      where:{order_number: req.params.order_number}
+    }).then(()=>{
+      res.send({result:true});
+    }).catch(()=>{
+      res.send({result:false});
+    })
   });
 });
 
