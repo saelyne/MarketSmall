@@ -24,15 +24,15 @@ public class CustomerMain extends AppCompatActivity{
                 android.Manifest.permission.ACCESS_FINE_LOCATION,
                 android.Manifest.permission.ACCESS_COARSE_LOCATION }, 0);
 
-        setLocationBtn= (Button) findViewById(R.id.Setlocationbutton);
-
-        setLocationBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(CustomerMain.this, SetLocation.class);
-                startActivity(intent);
-            }
-        });
+//        setLocationBtn= (Button) findViewById(R.id.Setlocationbutton);
+//
+//        setLocationBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(CustomerMain.this, SetLocation.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
 }

@@ -44,7 +44,6 @@ public class  SetLocation extends AppCompatActivity implements OnMapReadyCallbac
         mapFragment.getMapAsync(this);
 
         confirmBtn = (Button) findViewById(R.id.Setlocationbutton);
-
         confirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
