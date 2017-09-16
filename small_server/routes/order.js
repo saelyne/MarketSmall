@@ -10,6 +10,17 @@ var multer = require('multer');
 var config = require('../config/config.json')[process.env.NODE_ENV || "development"];
 
 
+router.get('/:order_number',function(req,res,next){
+  models.order_line_item.findAll({
+    where:{sales_order_id: req.params.order_number},
+    include: [models.items]
+  }).then((data)=>{
+    res.send(data);
+  }).catch(()=>{
+    res.send({result:false});
+  })
+
+});
 
 router.post('/selectStore', function(req, res, next){
    models.sales_order.create({
@@ -30,7 +41,11 @@ router.post('/addItem', function(req,res,next){
 		ExtendedPrice: req.body.quantity*req.body.unitPrice,
 		sales_order_id: req.body.sales_order_id,
 		items_id: req.body.items_id
-	});
+	}).then(()=>{
+    res.send({result:true})
+  }).catch(()=>{
+    res.send({result:false})
+  });
 });
 
 

@@ -21,7 +21,16 @@ router.get('/:id', function(req, res, next){
 	});
 });
 
-
-
+router.post('/addItem',function(req,resnext){
+	models.items.create({
+		name: req.body.name,
+		price: req.body.price,
+		store_id: req.body.store_id
+	}).then(()=>{
+		res.send({result:true});
+	}).catch(()=>{
+		res.send({result:false});
+	})
+});
 
 module.exports = router;
