@@ -43,7 +43,7 @@ public class MarketList extends AppCompatActivity {
 
     private Button Btn;
     private ListView data;
-    private ArrayList<HashMap<String, String>> list;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,14 +58,7 @@ public class MarketList extends AppCompatActivity {
                 android.Manifest.permission.ACCESS_FINE_LOCATION,
                 android.Manifest.permission.ACCESS_COARSE_LOCATION}, 0);
 
-        Btn= (Button) findViewById(R.id.Checkbutton);
-        Btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MarketList.this, ItemList.class);
-                startActivity(intent);
-            }
-        });
+
     }
 
 
@@ -79,6 +72,15 @@ public class MarketList extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     ArrayList<String> list = (ArrayList)response.body();
                     ArrayAdapter<String> aList = new ArrayAdapter<String>(MarketList.this,android.R.layout.simple_list_item_1,list);
+
+                    data.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            Intent intent = new Intent(MarketList.this, ItemList.class);
+                            intent.putExtra("ids",""+(id+1));
+                            startActivity(intent);
+                        }
+                    });
                     data.setAdapter(aList);
 
 

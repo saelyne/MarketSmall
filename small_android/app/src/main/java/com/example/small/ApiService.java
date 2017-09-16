@@ -6,6 +6,7 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 
 /**
  * Created by EunChan Park on 2017-09-16.
@@ -14,6 +15,9 @@ import retrofit2.http.GET;
 public interface ApiService {
     @GET("store/getStore")
     Call<List<StoreData>> getStoreDataList();
+
+    @GET("store/getStoreItem/{id}")
+    Call<List<Orders>> getItemList(@Path("id") String id);
 
 
     public static final Retrofit retrofit = new Retrofit.Builder()

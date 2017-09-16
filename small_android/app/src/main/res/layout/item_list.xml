@@ -36,16 +36,32 @@
             android:textColor="@color/black"
             android:textSize="15dp"
             />
+        <ListView
+        android:id="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dp"
+        >
+    </ListView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
 
         <Button
-            android:id="@+id/Checkbutton0"
-            android:background="@color/theme"
+            android:id="@+id/Checkbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="550dp"
-            android:textColor="@color/white"
-            android:text="확인" />
-
+            android:layout_marginTop="10dp"
+            android:background="@color/theme"
+            android:text="CHECK"
+            android:textColor="@color/white" />
 
     </RelativeLayout>
 

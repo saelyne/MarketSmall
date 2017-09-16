@@ -54,14 +54,7 @@
         android:layout_height="wrap_content">
 
 
-        <Button
-            android:id="@+id/Checkbutton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@color/theme"
-            android:text="CHECK"
-            android:textColor="@color/white" />
+
 
     </RelativeLayout>
 
