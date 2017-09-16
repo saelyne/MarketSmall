@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class ReadJson {
 
-    private void readJson() {
+    private void readJson(String result) {
         JSONObject jsonObject = new JSONObject(result); //result를 인자로 넣어 jsonObject를 생성한다.
 
         JSONArray jsonArray = jsonObject.getJSONArray("dataSet"); //"dataSet"의 jsonObject들을 배열로 저장한다.
