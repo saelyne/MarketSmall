@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="17dp"
             android:textColor="@color/white"
-            android:text="Set location"
+            android:text="위치 설정"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true" />
 

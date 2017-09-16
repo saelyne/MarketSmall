@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@color/theme"
-            android:text="CHECK"
+            android:text="장바구니 확인"
             android:textColor="@color/white" />
 
     </RelativeLayout>
