@@ -2,15 +2,11 @@
 
 module.exports = function(sequelize, DataTypes) {
   var order_line_item = sequelize.define('order_line_item', {
-    quantity: {
-      type: DataTypes.INTEGER(4),
+  name: {
+      type: DataTypes.STRING(40),
       allowNull: false
     },
-    unitPrice: {
-      type: DataTypes.INTEGER(10),
-      allowNull: false
-    },
-    ExtendedPrice: {
+    price: {
       type: DataTypes.INTEGER(10),
       allowNull: false
     }

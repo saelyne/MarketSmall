@@ -13,6 +13,7 @@ public class Orders {
     Long id;
     Long quantity;
     Long sales_order_id;
+    Object item;
 
     public Orders(String name, Long price, Long store_id,Long id) {
         this.name = name;

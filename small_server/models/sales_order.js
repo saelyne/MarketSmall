@@ -2,15 +2,24 @@
 
 module.exports = function(sequelize, DataTypes) {
   var sales_order = sequelize.define('sales_order', {
-    order_number: {
-      type: DataTypes.INTEGER(10),
+    phone_number: {
+      type: DataTypes.INTEGER(15),
       allowNull: false,
       primaryKey: true
     },
     total:{
       type: DataTypes.INTEGER(10),
       allowNull: true
+    },
+    address:{
+      type: DataTypes.STRING(50),
+      allowNull: false
+    },
+    name:{
+      type: DataTypes.STRING(10),
+      allowNull: false
     }
+
   }, {
     tableName: 'sales_order',
     charset: 'utf8',

@@ -11,7 +11,7 @@ var config = require('../config/config.json')[process.env.NODE_ENV || "developme
 
 
 
-router.get('/getStore/:id', function(req, res, next){
+router.get('/getStoreItem/:id', function(req, res, next){
 	models.items.findAll({
 		where:{store_id: req.params.id}
 	}).then((data)=>{

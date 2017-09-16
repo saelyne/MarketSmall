@@ -16,10 +16,11 @@ router.get('/getOrder/:order_number',function(req,res,next){
     where:{sales_order_id: req.params.order_number},
     include: [models.items]
   }).then((data)=>{
+
     res.send(data);
   }).catch(()=>{
     res.send({result:false});
-  })
+  })  
 
 });
 
@@ -29,6 +30,22 @@ router.get('/getItem',function(req,res,next){
   }).catch(()=>{
     res.send({result:false});
   })
+});
+
+router.post('/addOrder',function(req,res,next){
+  console.log(req.body);
+  models.sales_order.create({
+    phone_number: req.body.phone_number,
+    total: req.body.total,
+    address: req.body.address,
+    name: req.body.name,
+    store_id: req.body.store_id,
+    user_id: req.body.user_id
+  }).then(()=>{
+    res.send({result: true});
+  }).catch(()=>{
+    res.send({result: false});
+  });
 });
 
 router.post('/selectStore', function(req, res, next){
@@ -46,11 +63,10 @@ router.post('/selectStore', function(req, res, next){
 router.post('/addItem', function(req,res,next){
   console.log(req.body);
 	models.order_line_item.create({
-		quantity: req.body.quantity,
-		unitPrice: req.body.unitPrice,
-		ExtendedPrice: req.body.quantity*req.body.unitPrice,
+		price: req.body.price,
+    name: req.body.name,
 		sales_order_id: req.body.sales_order_id,
-		items_id: req.body.items_id
+		items_id: req.body.id
 	}).then(()=>{
     res.send({result:true})
   }).catch(()=>{

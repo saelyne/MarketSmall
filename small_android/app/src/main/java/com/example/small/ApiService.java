@@ -27,6 +27,9 @@ public interface ApiService {
     @POST("order/addItem")
     Call<Orders> addItem(@Body Orders order);
 
+    @GET("order/getOrder/{id}")
+    Call<List<Orders>> getOrder(@Path("id") String id);
+
 
     public static final Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("http://172.16.0.59:3000/")
