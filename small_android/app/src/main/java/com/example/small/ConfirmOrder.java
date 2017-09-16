@@ -29,11 +29,13 @@ import static com.example.small.ItemList.positions;
 public class ConfirmOrder extends AppCompatActivity {
 
     private Button checkBtn;
+    private Button gobackBtn;
     private ListView data;
     private TextView total;
     private ArrayList<Orders> finalOrder;
     private ArrayList<String> cart;
     private int sum;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +67,14 @@ public class ConfirmOrder extends AppCompatActivity {
                 Intent intent = new Intent(ConfirmOrder.this, OrderComplete.class);
                 intent.putExtra("total",sum);
                 startActivity(intent);
+            }
+        });
+
+        gobackBtn= (Button) findViewById(R.id.goBackBtn);
+        gobackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
