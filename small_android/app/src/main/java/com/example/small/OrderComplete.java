@@ -3,11 +3,13 @@ package com.example.small;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -28,7 +30,9 @@ public class OrderComplete extends AppCompatActivity {
 
     private Button checkBtn;
     private TextView totalValue;
-    private String name, address, phone;
+    private String name, address,phone;
+    private int a;
+    EditText editname,editaddress,editphone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,21 +40,51 @@ public class OrderComplete extends AppCompatActivity {
         setContentView(R.layout.order_complete);
         totalValue = (TextView) findViewById(R.id.totalPriceValue);
         Intent intent = getIntent();
-        int a = intent.getExtras().getInt("total");
+        a = intent.getExtras().getInt("total");
         totalValue.setText(a+"");
 
-        name = findViewById(R.id.nameText).toString();
-        address = findViewById(R.id.addressText).toString();
-        phone = findViewById(R.id.phoneText).toString();
+        editname = (EditText) findViewById(R.id.nameText);
+        editaddress = (EditText)findViewById(R.id.addressText);
+        editphone =(EditText)findViewById(R.id.phoneText);
+
+        name = editname.getText().toString();
+        address= editaddress.getText().toString();
+        phone = editphone.getText().toString();
+
 
 
         checkBtn= (Button) findViewById(R.id.orderButton2);
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ItemData itemdata= new ItemData(phone,(long)a,address,name,(long)3,(long)1);
+                sendRequest(itemdata);
                 Intent intent = new Intent(OrderComplete.this, FinalComplete.class);
                 startActivity(intent);
             }
         });
+    }
+
+    private void sendRequest(ItemData itemdata) {
+        ApiService apiService = ApiService.retrofit.create(ApiService.class);
+        Call<ItemData> call = apiService.updateItem(itemdata);
+        call.enqueue(new Callback<ItemData>() {
+
+            @Override
+            public void onResponse(Call<ItemData> call, Response<ItemData> response) {
+                if (response.isSuccessful()) {
+
+
+                } else {
+                    Log.e("ERROR", "Unsuccessful");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ItemData> call, Throwable t) {
+                Log.e("ERROR", "onFailure", t);
+            }
+        });
+
     }
 }

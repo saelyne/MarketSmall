@@ -6,6 +6,8 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
+import retrofit2.http.Body;
 import retrofit2.http.Path;
 
 /**
@@ -18,6 +20,9 @@ public interface ApiService {
 
     @GET("store/getStoreItem/{id}")
     Call<List<Orders>> getItemList(@Path("id") String id);
+
+    @POST("order/addOrder")
+    Call<ItemData> updateItem(@Body ItemData itemData);
 
 
     public static final Retrofit retrofit = new Retrofit.Builder()
