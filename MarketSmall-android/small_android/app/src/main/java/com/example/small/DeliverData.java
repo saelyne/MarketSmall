@@ -1,4 +1,4 @@
-package com.example.hongyejin.small;
+package com.example.small;
 
 /**
  * Created by HONGGIBEOM on 2017. 9. 16..

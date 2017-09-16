@@ -1,4 +1,4 @@
-package com.example.hongyejin.small;
+package com.example.small;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

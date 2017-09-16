@@ -1,4 +1,4 @@
-package com.example.hongyejin.small;
+package com.example.small;
 
 import android.content.ContentValues;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package com.example.saelyne.small;
+package com.example.small;
 
 import android.app.Activity;
 import android.content.Context;

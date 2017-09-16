@@ -1,4 +1,4 @@
-package com.example.saelyne.small;
+package com.example.small;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

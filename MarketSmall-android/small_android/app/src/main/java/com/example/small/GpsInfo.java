@@ -1,4 +1,4 @@
-package com.example.saelyne.small;
+package com.example.small;
 
 import android.Manifest;
 import android.app.AlertDialog;

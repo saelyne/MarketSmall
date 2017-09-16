@@ -1,4 +1,4 @@
-package com.example.saelyne.small;
+package com.example.small;
 
 import android.*;
 import android.content.Intent;
