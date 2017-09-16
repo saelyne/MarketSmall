@@ -35,8 +35,9 @@ public class OrderComplete extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order_complete);
         totalValue = (TextView) findViewById(R.id.totalPriceValue);
-        Intent intent = new Intent();
-
+        Intent intent = getIntent();
+        int a = intent.getExtras().getInt("total");
+        totalValue.setText(a+"");
 
         name = findViewById(R.id.nameText).toString();
         address = findViewById(R.id.addressText).toString();
