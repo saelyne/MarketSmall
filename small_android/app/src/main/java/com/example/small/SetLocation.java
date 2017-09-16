@@ -33,6 +33,7 @@ public class  SetLocation extends AppCompatActivity implements OnMapReadyCallbac
     static Activity mActivity;
     private GpsInfo gps;
     private Button confirmBtn;
+    public static double longitude,latitude;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,8 @@ public class  SetLocation extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SetLocation.this, MarketList.class);
+                intent.putExtra("positionX",latitude);
+                intent.putExtra("positionY",longitude);
                 startActivity(intent);
             }
         });
@@ -66,8 +69,8 @@ public class  SetLocation extends AppCompatActivity implements OnMapReadyCallbac
         gps = new GpsInfo(SetLocation.this);
 
         if (gps.isGetLocation()) {
-            double latitude = gps.getLatitude();
-            double longitude = gps.getLongitude();
+            latitude = gps.getLatitude();
+            longitude = gps.getLongitude();
             LatLng latLng = new LatLng(latitude, longitude);
 
             Log.d("dd", "" + Double.toString(latitude) + "");

@@ -11,6 +11,16 @@ public class StoreData {
     Double latitude;
     Double longitude;
     String user_id;
+    double dist;
+    boolean isShort=false;
+
+    public StoreData() {
+        this.id = 0l;
+        this.name = "";
+        this.latitude = 0d;
+        this.longitude = 0d;
+        this.user_id = "";
+    }
 
     public StoreData(Long id, String name, Double latitude, Double longitude, String user_id) {
         this.id = id;
@@ -65,4 +75,11 @@ public class StoreData {
     public void setUser_id(String user_id) {
         this.user_id = user_id;
     }
+
+    public Double getDist(){return dist;}
+
+    public void setDist(double dist){this.dist = dist;}
+
+    public void setShort(){this.isShort=true;}
 }
+

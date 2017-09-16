@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         isDelivered = (CheckBox) findViewById(R.id.deliver_checkBox);
         ArrayList<DeliverData> deliverDatas = new ArrayList<>();
                 deliverView.setLayoutManager(new LinearLayoutManager(this));
-                deliverView.setAdapter(new DeliverAdapter(this,deliverDatas));
+                deliverView.setAdapter(new StoreAdapter(this,deliverDatas));
                 goDelivered = (ImageButton)findViewById(R.id.goDelivered);
                 goDelivered.setOnClickListener(new View.OnClickListener() {
                     @Override
