@@ -22,6 +22,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static com.example.small.ItemList.orders;
+import static com.example.small.ItemList.positions;
+
 /**
  * Created by Saelyne on 2017. 9. 16..
  */
@@ -59,10 +62,39 @@ public class OrderComplete extends AppCompatActivity {
             public void onClick(View v) {
                 ItemData itemdata= new ItemData(phone,(long)a,address,name,(long)3,(long)1);
                 sendRequest(itemdata);
+                sendReq(orders,positions);
+
                 Intent intent = new Intent(OrderComplete.this, FinalComplete.class);
                 startActivity(intent);
             }
         });
+    }
+
+
+    private void sendReq(ArrayList<Orders> order, ArrayList<Integer> pos) {
+        ApiService apiService = ApiService.retrofit.create(ApiService.class);
+        for (int i=0; i<pos.size();i++) {
+            Call<Orders> call = apiService.addItem(order.get(pos.get(i)));
+            call.enqueue(new Callback<Orders>() {
+                @Override
+                public void onResponse(Call<Orders> call, Response<Orders> response) {
+                    if (response.isSuccessful()) {
+
+
+                    } else {
+                        Log.e("ERROR", "Unsuccessful");
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Orders> call, Throwable t) {
+                    Log.e("ERROR", "onFailure", t);
+                }
+
+
+            });
+
+        }
     }
 
     private void sendRequest(ItemData itemdata) {
