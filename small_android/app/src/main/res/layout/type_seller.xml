@@ -40,12 +40,12 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:hint="ID"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="28dp"
             android:layout_below="@+id/phoneEnter"
             android:layout_centerHorizontal="true" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button2"
             android:layout_centerHorizontal="true"
             android:background="@color/theme"
             android:layout_width="100dp"

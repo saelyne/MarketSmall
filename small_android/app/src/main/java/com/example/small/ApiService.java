@@ -30,6 +30,9 @@ public interface ApiService {
     @GET("order/getOrder/{id}")
     Call<List<Orders>> getOrder(@Path("id") String id);
 
+    @GET("store/getOrder/{id}")
+    Call<List<ItemData>> getDeliveries(@Path("id") String id);
+
 
     public static final Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("http://172.16.0.59:3000/")

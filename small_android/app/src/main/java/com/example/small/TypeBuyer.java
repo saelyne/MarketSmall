@@ -17,6 +17,7 @@ public class TypeBuyer extends AppCompatActivity {
     private String phone;
     private EditText editphone;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

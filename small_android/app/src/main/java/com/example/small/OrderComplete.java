@@ -25,6 +25,7 @@ import retrofit2.Response;
 
 import static com.example.small.ItemList.orders;
 import static com.example.small.ItemList.positions;
+import static com.example.small.MarketList.store_id;
 
 /**
  * Created by Saelyne on 2017. 9. 16..
@@ -55,6 +56,7 @@ public class OrderComplete extends AppCompatActivity {
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 editname = (EditText) findViewById(R.id.nameText);
                 editaddress = (EditText)findViewById(R.id.addressText);
                 editphone =(EditText)findViewById(R.id.phoneText);
@@ -62,7 +64,8 @@ public class OrderComplete extends AppCompatActivity {
                 name = editname.getText().toString();
                 address= editaddress.getText().toString();
                 phone = editphone.getText().toString();
-                ItemData itemdata= new ItemData(phone,(long)a,address,name,(long)3,(long)1111);
+                Intent intent2 = getIntent();
+                ItemData itemdata= new ItemData(phone,(long)a,address,name,store_id,(long)1111);
                 sendRequest(itemdata);
                 sendReq(orders,positions);
 
