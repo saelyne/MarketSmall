@@ -35,10 +35,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CustomerMain" />
         <activity android:name=".SetLocation" />
         <activity android:name=".SellerMain" />
-
+        <activity android:name=".ItemList" />
+        <activity android:name=".BuyerMain" />
+        <activity android:name=".CheckOrder" />
+        <activity android:name=".ConfirmOrder" />
+        <activity android:name=".MarketList" />
+        <activity android:name=".OrderComplete" />
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"

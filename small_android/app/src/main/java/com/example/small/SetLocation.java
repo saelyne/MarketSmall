@@ -47,7 +47,7 @@ public class  SetLocation extends AppCompatActivity implements OnMapReadyCallbac
         confirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SetLocation.this, CustomerMain.class);
+                Intent intent = new Intent(SetLocation.this, MarketList.class);
                 startActivity(intent);
             }
         });

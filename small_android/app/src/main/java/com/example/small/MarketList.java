@@ -24,7 +24,7 @@ public class MarketList extends AppCompatActivity{
                 android.Manifest.permission.ACCESS_FINE_LOCATION,
                 android.Manifest.permission.ACCESS_COARSE_LOCATION }, 0);
 
-        checkBtn= (Button) findViewById(R.id.Checkbutton_1);
+        checkBtn= (Button) findViewById(R.id.Checkbtn1);
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,5 +33,4 @@ public class MarketList extends AppCompatActivity{
             }
         });
     }
-
 }
