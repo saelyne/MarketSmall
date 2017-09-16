@@ -11,11 +11,12 @@ GET  /order/:order_number			O  				Get order information with order number
 GET  /order/setTotal/:order_number  O  				Set the total cost of order
 
 POST /order/selectStore/			O				parameters: order_number, store_id, user_id, add row to order table with parameters
-POST /order/addItem/				O				parameters: quantity, unitprice, sales_order_id
+POST /order/addItem/				O				parameters: quantity, unitprice, sales_order_id, items_id
 
 
 Store:
 
 GET  	/store/:id					O				Get list of materials of the store with :id
+POST 	/store/addStore				O               parameters: name, user_id
 POST 	/store/addItem				O 				parameters: name, price, store_id
 DELETE	/store/deleteItem/:id       O               delete item with id (pk)
