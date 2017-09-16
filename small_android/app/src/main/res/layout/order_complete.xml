@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        >
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <TextView
+            android:id="@+id/marketlistText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주문내역"
+            android:textColor="@color/theme"
+            android:textStyle="bold"
+            android:textSize="25dp"/>
+
+        <RelativeLayout
+            android:layout_width="500dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="13dp"
+            android:layout_below="@+id/marketlistText"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/relativeLayout">
+
+            <TextView
+                android:id="@+id/totalPrice1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="총 주문금액"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingTop="40dp"
+                android:paddingLeft="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="얼마"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:paddingLeft="10dp"
+                android:layout_below="@id/totalPrice1"
+                android:layout_centerHorizontal="true"/>
+
+            <RelativeLayout
+                android:layout_width="500dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="150dp"
+                android:background="@color/white">
+
+
+                <TextView
+                    android:id="@+id/name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이름을 입력하세요"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:paddingLeft="10dp"/>
+
+                <EditText
+                    android:id="@+id/nameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name"
+                    android:layout_below="@+id/name1"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/address1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="주소를 입력하세요"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/nameText"
+                    android:paddingLeft="10dp"/>
+
+                <EditText
+                    android:id="@+id/addressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Address"
+                    android:layout_below="@id/address1"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/phone1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전화번호를 입력하세요"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:paddingTop="20dp"
+                    android:layout_below="@id/addressText"
+                    android:paddingLeft="10dp"/>
+
+                <EditText
+                    android:id="@+id/phoneText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Phone Number"
+                    android:layout_below="@id/phone1"
+                    android:layout_alignParentStart="true" />
+
+
+
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+        <Button
+            android:id="@+id/orderButton2"
+            android:background="@color/theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="550dp"
+            android:textColor="@color/white"
+            android:text="확인" />
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

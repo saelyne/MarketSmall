@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        >
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <TextView
+            android:id="@+id/marketlistText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주문내역"
+            android:textColor="@color/theme"
+            android:textStyle="bold"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="총 금액 : 얼마"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="500dp"
+            />
+
+
+        <Button
+            android:id="@+id/back"
+            android:background="@color/theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="550dp"
+            android:textColor="@color/white"
+            android:text="돌아가기" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
