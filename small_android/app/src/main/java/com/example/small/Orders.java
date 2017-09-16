@@ -11,12 +11,26 @@ public class Orders {
     Long price;
     Long store_id;
     Long id;
+    Long quantity;
+    Long sales_order_id;
 
     public Orders(String name, Long price, Long store_id,Long id) {
         this.name = name;
         this.price = price;
         this.store_id = store_id;
         this.id = id;
+    }
+
+    public Orders(String name, Long price, Long store_id,Long id, Long quantity, Long sales_order_id) {
+        this.name = name;
+        this.price = price;
+        this.store_id = store_id;
+        this.id = id;
+        this.quantity= quantity;
+        this.sales_order_id = sales_order_id;
+    }
+    public void setSales(Long sales_order_id){
+        this.sales_order_id=sales_order_id;
     }
 
     public String getName(){

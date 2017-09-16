@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -46,21 +47,22 @@ public class OrderComplete extends AppCompatActivity {
         a = intent.getExtras().getInt("total");
         totalValue.setText(a+"");
 
-        editname = (EditText) findViewById(R.id.nameText);
-        editaddress = (EditText)findViewById(R.id.addressText);
-        editphone =(EditText)findViewById(R.id.phoneText);
-
-        name = editname.getText().toString();
-        address= editaddress.getText().toString();
-        phone = editphone.getText().toString();
 
 
+       Log.e("Debug","name"+name+address+phone);
 
         checkBtn= (Button) findViewById(R.id.orderButton2);
         checkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ItemData itemdata= new ItemData(phone,(long)a,address,name,(long)3,(long)1);
+                editname = (EditText) findViewById(R.id.nameText);
+                editaddress = (EditText)findViewById(R.id.addressText);
+                editphone =(EditText)findViewById(R.id.phoneText);
+
+                name = editname.getText().toString();
+                address= editaddress.getText().toString();
+                phone = editphone.getText().toString();
+                ItemData itemdata= new ItemData(phone,(long)a,address,name,(long)3,(long)1111);
                 sendRequest(itemdata);
                 sendReq(orders,positions);
 
@@ -75,6 +77,7 @@ public class OrderComplete extends AppCompatActivity {
     private void sendReq(ArrayList<Orders> order, ArrayList<Integer> pos) {
         ApiService apiService = ApiService.retrofit.create(ApiService.class);
         for (int i=0; i<pos.size();i++) {
+            order.get(pos.get(i)).setSales(Long.parseLong(phone));
             Call<Orders> call = apiService.addItem(order.get(pos.get(i)));
             call.enqueue(new Callback<Orders>() {
                 @Override
