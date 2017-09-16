@@ -65,6 +65,7 @@ public class OrderComplete extends AppCompatActivity {
                 sendReq(orders,positions);
 
                 Intent intent = new Intent(OrderComplete.this, FinalComplete.class);
+                intent.putExtra("total",a);
                 startActivity(intent);
             }
         });

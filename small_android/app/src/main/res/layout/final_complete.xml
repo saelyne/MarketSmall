@@ -54,7 +54,7 @@
 
 
                 <TextView
-                    android:id="@+id/name1"
+                    android:id="@+id/totalSum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="0dp"
@@ -65,11 +65,11 @@
 
 
                 <TextView
-                    android:id="@+id/address1"
+                    android:id="@+id/time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/name1"
-                    android:layout_below="@id/name1"
+                    android:layout_alignStart="@id/totalSum"
+                    android:layout_below="@id/totalSum"
                     android:paddingLeft="0dp"
                     android:paddingTop="20dp"
                     android:text="소요 시간"
