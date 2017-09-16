@@ -12,7 +12,7 @@ public class DeliverData {
 
 
     public DeliverData(int cid, String name, String address, String number) {
-       this.cid=cid;
+        this.cid=cid;
         this.userName=name;
         this.userAddress=address;
         this.userNumber=number;
