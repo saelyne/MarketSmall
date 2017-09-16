@@ -27,6 +27,14 @@ module.exports = function(sequelize, DataTypes) {
     store_id: {
       type: DataTypes.INTEGER(10),
       allowNull: true
+    },
+    latitude: {
+      type: DataTypes.DOUBLE(),
+      allowNull: true
+    },
+    longitude: {
+      type: DataTypes.DOUBLE(),
+      allowNull: true
     }
   }, {
     tableName: 'user',

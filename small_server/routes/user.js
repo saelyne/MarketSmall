@@ -11,7 +11,18 @@ var config = require('../config/config.json')[process.env.NODE_ENV || "developme
 
 
 
-
+router.post('/setLocation',function(req,res,next){
+	models.user.update({
+      latitude: req.body.latitude,
+      longitude: req.body.longitude
+    }, {
+      where: {uid: req.body.uid}
+    }).then(()=>{
+		res.send({result:true});
+	}).catch(()=>{
+		res.send({result:false});
+	})
+});
 
 
 
