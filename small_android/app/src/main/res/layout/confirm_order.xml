@@ -42,19 +42,37 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:layout_gravity="center"
         android:textAlignment="center"
         />
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/goBackBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/theme"
+            android:text="계속 장보기"
+            android:textColor="@color/white" />
+
         <Button
             android:id="@+id/orderButton1"
-            android:background="@color/theme"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="주문하기" />
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/goBackBtn"
+            android:background="@color/theme"
+            android:text="주문하기"
+            android:textColor="@color/white" />
 
+
+    </RelativeLayout>
 
 
 </LinearLayout>
