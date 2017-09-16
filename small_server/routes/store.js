@@ -17,7 +17,7 @@ router.get('/getStore/:id', function(req, res, next){
 	}).then((data)=>{
 		res.send(data);
 	}).catch(()=>{
-		res.send({result:false});
+		res.send({reult:false});
 	});
 });
 
@@ -52,7 +52,7 @@ router.post('/addItem',function(req,res,next){
 	})
 });
 
-router.delete('/deleteItem/:id',function(req,res){
+router.post('/deleteItem/:id',function(req,res){
 	models.items.destroy({
 		where: {id: req.params.id}
 	}).then(()=>{
@@ -60,6 +60,16 @@ router.delete('/deleteItem/:id',function(req,res){
 	}).catch(()=>{
 		res.send({result: false});
 	})
-})
+})l
+
+router.get('/getOrder/:store_id'){
+	models.sales_order.findAll({
+		where:{ store_id: req.params.store_id}
+	}).then((data)=>{
+		res.send(data);
+	}).catch(()=>{
+		res.send({result:false});
+	})
+}
 
 module.exports = router;

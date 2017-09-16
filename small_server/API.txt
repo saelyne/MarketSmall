@@ -8,7 +8,7 @@ POST /user/login 					X
 POST /user/setLocation				O 				parameters: uid, latitude, longtitude; set GPS location of user.
 
 Order:
-GET  /order/:order_number			O  				Get order information with order number
+GET  /order/getOrder/:order_number	O  				Get order information with order number
 GET  /order/setTotal/:order_number  O  				Set the total cost of order
 
 POST /order/selectStore/			O				parameters: order_number, store_id, user_id;  make order when user select store
@@ -19,6 +19,7 @@ Store:
 
 GET  	/store/getStore/:id			O				Get list of materials of the store with :id
 GET     /store/getStore             O               Get all the store list 
+GET 	/store/getOrder/:store_id	O 				Send all the order that belongs to store_id
 POST 	/store/addStore				O               parameters: name, user_id
 POST 	/store/addItem				O 				parameters: name, price, store_id
-DELETE	/store/deleteItem/:id       O               delete item with id (pk)
+POST	/store/deleteItem/:id       O               delete item with id (pk)
