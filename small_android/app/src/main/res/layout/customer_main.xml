@@ -5,57 +5,51 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp">
+        android:layout_height="40dp"
+
+        >
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="56dp"
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
-        <ImageView android:src="@drawable/logo_sample"
+        <TextView
+            android:id="@+id/marketlistText"
             android:layout_width="wrap_content"
-            android:layout_height="145dp"
-            android:layout_gravity="center_horizontal" />
+            android:layout_height="wrap_content"
+            android:text="Market List"
+            android:textColor="@color/theme"
+            android:textStyle="bold"
+            android:textSize="25dp"/>
 
-        <!--<Button-->
-            <!--android:id="@+id/Orderbutton"-->
-            <!--style="@style/Widget.AppCompat.Button.Colored"-->
-            <!--android:layout_marginTop="30dp"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:textColor="@color/white"-->
-            <!--android:text="ORDER" />-->
+        <TextView
+            android:layout_alignBottom="@id/marketlistText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가까운 순으로 보여집니다"
+            android:paddingLeft="200dp"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            />
 
-        <RelativeLayout
+
+
+
+        <Button
+            android:id="@+id/Checkbutton"
+            android:background="@color/theme"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/Checkbutton"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="250dp"
-                android:layout_marginBottom="30dp"
-                android:textColor="@color/white"
-                android:text="CHECK" />
-
-        </RelativeLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="550dp"
+            android:textColor="@color/white"
+            android:text="CHECK" />
 
 
-        <!--<Button-->
-            <!--android:id="@+id/Setlocationbutton"-->
-            <!--style="@style/Widget.AppCompat.Button.Colored"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:textColor="@color/white"-->
-            <!--android:text="Set location" />-->
-
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>
