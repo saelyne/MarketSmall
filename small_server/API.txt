@@ -1,25 +1,15 @@
 REST API
 
-			 						Done?			Description
+			    구현 여부			기능
 User:
 
-POST /user/register             	X
-POST /user/login 					X
-POST /user/setLocation				O 				parameters: uid, latitude, longtitude; set GPS location of user.
+POST /user/register             X
+POST /user/login 		X
 
 Order:
-GET  /order/getOrder/:order_number	O  				Get order information with order number
-GET  /order/setTotal/:order_number  O  				Set the total cost of order
-
-POST /order/selectStore/			O				parameters: order_number, store_id, user_id;  make order when user select store
-POST /order/addItem/				O				parameters: quantity, unitprice, sales_order_id, items_id
+POST /order/selectStore/	O			parameters: order_number, store_id, user_id, add row to order table with parameters
 
 
 Store:
 
-GET  	/store/getStore/:id			O				Get list of materials of the store with :id
-GET     /store/getStore             O               Get all the store list 
-GET 	/store/getOrder/:store_id	O 				Send all the order that belongs to store_id
-POST 	/store/addStore				O               parameters: name, user_id
-POST 	/store/addItem				O 				parameters: name, price, store_id
-POST	/store/deleteItem/:id       O               delete item with id (pk)
+GET /store			O			Get list of all the stores

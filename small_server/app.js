@@ -35,20 +35,14 @@ app.use(function(err, req, res, next) {
     res.send('error');
 });
 
-
+console.log('running');
 var routes = require('./routes/index');
 
 
 
 app.use('/', routes);
 
-/*
-app.use('/profsystem/classes/', classes);
-app.use('/profsystem/dept/', dept);
-app.use('/profsystem/prof/', prof);
-app.use('/profsystem/timemodel/', timemodel);
 
-*/
 
 
 // development error handler

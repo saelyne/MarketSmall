@@ -23,6 +23,14 @@ router.get('/getOrder/:order_number',function(req,res,next){
 
 });
 
+router.get('/getItem',function(req,res,next){
+  models.items.findAll().then((data)=>{
+    res.send(data);
+  }).catch(()=>{
+    res.send({result:false});
+  })
+});
+
 router.post('/selectStore', function(req, res, next){
    models.sales_order.create({
    	order_number: req.body.order_number,
@@ -36,6 +44,7 @@ router.post('/selectStore', function(req, res, next){
 });
 
 router.post('/addItem', function(req,res,next){
+  console.log(req.body);
 	models.order_line_item.create({
 		quantity: req.body.quantity,
 		unitPrice: req.body.unitPrice,

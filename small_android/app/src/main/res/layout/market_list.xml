@@ -12,9 +12,9 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="550dp"
+        android:orientation="vertical"
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
@@ -24,31 +24,44 @@
             android:layout_height="wrap_content"
             android:text="Market List"
             android:textColor="@color/theme"
-            android:textStyle="bold"
-            android:textSize="25dp"/>
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_alignBottom="@id/marketlistText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="가까운 순으로 보여집니다"
+            android:layout_alignBottom="@id/marketlistText"
             android:paddingLeft="200dp"
+            android:text="가까운 순으로 보여집니다"
             android:textColor="@color/black"
-            android:textSize="15dp"
-            />
+            android:textSize="15dp" />
+
+        <ListView
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="70dp"
+            >
+        </ListView>
 
 
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
         <Button
-            android:id="@+id/Checkbtn1"
-            android:background="@color/theme"
+            android:id="@+id/Checkbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="550dp"
-            android:textColor="@color/white"
-            android:text="CHECK" />
-
+            android:layout_marginTop="10dp"
+            android:background="@color/theme"
+            android:text="CHECK"
+            android:textColor="@color/white" />
 
     </RelativeLayout>
 

@@ -22,7 +22,9 @@ router.get('/getStore/:id', function(req, res, next){
 });
 
 router.get('/getStore',function(req,res,next){
-	models.store.findAll().then((data)=>{
+	models.store.findAll({
+		attributes: ['id','name','latitude','longitude','user_id']
+	}).then((data)=>{
 		res.send(data);
 	}).catch(()=>{
 		res.send({result:false});
