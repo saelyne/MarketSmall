@@ -47,6 +47,7 @@
         <activity android:name=".TypeSeller" />
         <activity android:name=".DeliverList" />
         <activity android:name=".ItemAdd" />
+        <activity android:name=".FinalComplete" />
         <activity android:name=".ItemDelete" />
 
         <meta-data

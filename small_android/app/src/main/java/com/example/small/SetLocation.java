@@ -79,7 +79,7 @@ public class  SetLocation extends AppCompatActivity implements OnMapReadyCallbac
 
             // 구글지도(지구) 에서의 zoom 레벨은 1~23 까지 가능합니다.
             // 여러가지 zoom 레벨은 직접 테스트해보세요
-            CameraUpdate zoom = CameraUpdateFactory.zoomTo(6);
+            CameraUpdate zoom = CameraUpdateFactory.zoomTo(9);
             googleMap.animateCamera(zoom);   // moveCamera 는 바로 변경하지만,
             // animateCamera() 는 근거리에선 부드럽게 변경합니다
 
@@ -88,7 +88,7 @@ public class  SetLocation extends AppCompatActivity implements OnMapReadyCallbac
             MarkerOptions marker = new MarkerOptions();
             marker.position(latLng)
                     .title("Here")
-                    .snippet("current location");
+                    .snippet("현재 위치");
             googleMap.addMarker(marker).showInfoWindow(); // 마커추가,화면에출력
         } else {
             gps.showSettingsAlert();
