@@ -41,7 +41,7 @@ public class ConfirmOrder extends AppCompatActivity {
         setContentView(R.layout.confirm_order);
 
         data = (ListView) findViewById(R.id.data);
-        total = (TextView) findViewById(R.id.total);
+        total = (TextView) findViewById(R.id.totalPriceValue);
 
         finalOrder = new ArrayList<Orders>();
         cart = new ArrayList<String>();

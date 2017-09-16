@@ -12,9 +12,9 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
@@ -24,42 +24,37 @@
             android:layout_height="wrap_content"
             android:text="장바구니"
             android:textColor="@color/theme"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-
+            android:textStyle="bold"
+            android:textSize="25dp"/>
         <ListView
             android:id="@+id/data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="70dp"></ListView>
+            android:layout_marginTop="70dp"
+            >
+        </ListView>
+        </RelativeLayout>
 
-
-        <Button
-            android:id="@+id/gobackBtn"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="550dp"
-            android:background="@color/theme"
-            android:layout_marginLeft="20dp"
-            android:text="계속 장보기"
-            android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/totalPriceValue"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        />
 
         <Button
             android:id="@+id/orderButton1"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/gobackBtn"
-            android:layout_alignBottom="@+id/gobackBtn"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="21dp"
-            android:layout_marginLeft="25dp"
             android:background="@color/theme"
-            android:text="주문하기"
-            android:textColor="@color/white" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="주문하기" />
 
 
-    </RelativeLayout>
 
 </LinearLayout>

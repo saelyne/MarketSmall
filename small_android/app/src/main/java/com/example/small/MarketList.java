@@ -58,7 +58,6 @@ public class MarketList extends AppCompatActivity {
                 android.Manifest.permission.ACCESS_FINE_LOCATION,
                 android.Manifest.permission.ACCESS_COARSE_LOCATION}, 0);
 
-
     }
 
 
