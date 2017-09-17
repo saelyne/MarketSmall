@@ -92,7 +92,7 @@
                     android:layout_marginTop="8dp"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:hint="Address"
+                    android:hint="Price"
                     android:layout_below="@id/address1"
                     android:layout_alignParentStart="true" />
 

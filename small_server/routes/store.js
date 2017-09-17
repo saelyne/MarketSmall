@@ -39,6 +39,7 @@ router.get('/getMyStore/:uid',function(req,res,next){
 			},
 			include: [models.store]
 		}).then((result)=>{
+			
 			res.send(result);
 		}).catch(()=>{
 			res.send({result: false});

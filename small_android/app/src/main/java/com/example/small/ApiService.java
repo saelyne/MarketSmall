@@ -9,6 +9,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Body;
 import retrofit2.http.Path;
+import retrofit2.http.DELETE;
 
 /**
  * Created by EunChan Park on 2017-09-16.
@@ -32,6 +33,9 @@ public interface ApiService {
 
     @GET("store/getOrder/{id}")
     Call<List<ItemData>> getDeliveries(@Path("id") String id);
+
+    @GET("store/getMyStore/{id}")
+    Call<List<Orders>> getMyStore(@Path("id") String id);
 
 
     public static final Retrofit retrofit = new Retrofit.Builder()
