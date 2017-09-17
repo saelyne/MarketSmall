@@ -1,0 +1,25 @@
+REST API
+
+			 						 				Description
+User:
+
+POST /user/setLocation				 				parameters: uid, latitude, longtitude; set GPS location of user.
+
+Order:
+GET  /order/getOrder/:order_number	  				Get order information with order number
+GET  /order/setTotal/:order_number    				Set the total cost of order
+
+POST /order/selectStore/							parameters: order_number, store_id, user_id;  make order when user select store
+POST /order/addItem/								parameters: quantity, unitprice, sales_order_id, items_id
+
+
+Store:
+
+GET  	/store/getStoreItem/:id     				Get list of materials of the store with :id
+GET     /store/getStore                             Get all the store list 
+GET 	/store/getOrder/:store_id	 				Send all the order that belongs to store_id
+GET 	/store/getMyOrder/:id                       Get orders directed to a single seller
+POST 	/store/addStore				                parameters: name, user_id
+POST 	/store/addItem				 				parameters: name, price, store_id
+POST	/store/deleteItem/:id                       delete item with id (pk)
+
